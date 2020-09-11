@@ -1,0 +1,93 @@
+/*
+ * Button component
+ */
+
+ .button {
+  font-family: 'Public Sans', sans-serif;
+  padding: 20px 25px;
+  border: 0;
+
+  &.main {
+    background-color: $green;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $gray;
+    color: $blue-gray;
+  }
+}
+
+.tab-btn {
+  padding: 16px 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  display: block;
+  cursor: pointer;
+  transition: $transition;
+  letter-spacing: $spacing;
+  float: left;
+  width: 50%;
+  transition-property: color, background-color;
+  transition-duration: 0.4s;
+  margin-bottom: 24px;
+  @include breakpoint(mobile) {
+    margin-bottom: 25px;
+  }
+}
+
+.tab-btn:hover:not(.active) {
+  background: $jungle;
+  color: $white;
+}
+
+.tab-btn:not(.active) {
+  background: $gray;
+  color: $white;
+}
+
+.tab-btn.active {
+  background: $green;
+  color: $white;
+}
+
+.submit-signup {
+  display: block;
+  width: 100%;
+  margin-top: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 28px;
+  font-weight: $bold;
+  cursor: pointer;
+  &:hover {
+    background: $jungle;
+  }
+  @include breakpoint(mobile) {
+    margin-top: 80px;
+  }
+}
+
+/* hide content */
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.login {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 28px;
+  font-weight: $bold;
+  cursor: pointer;
+  &:hover {
+    background: $jungle;
+  }
+}

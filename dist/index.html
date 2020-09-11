@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Interactive login / signup form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <form id="form-one">
+      <div>
+        <button type="button" class="tab-btn active main button" data-id="signup">Sign Up</button>
+        <button type="button" class="tab-btn secondary button" data-id="login-tab">Log In</button>
+      </div>
+      <div class="content active" id="signup">
+        <h1>Sign up for free</h1>
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <label for="first-name">First Name<span class="req">*</span></label>
+            <input type="text" class="name" id="first-name" autocomplete="off" />
+            <small>Error message</small>
+          </div>
+
+          <div class="field-wrap">
+            <label for="last-name" class="labels">Last Name<span class="req">*</span></label>
+            <input type="text" class="name" id="last-name" autocomplete="off" />
+            <small>Error message</small>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="submit-email" class="labels">Email Address<span class="req">*</span></label>
+          <input type="email" class="email" id="submit-email" autocomplete="off" />
+          <small>Error message</small>
+        </div>
+
+        <div class="field-wrap">
+          <label for="submit-password" class="labels">Set A Password<span class="req">*</span></label>
+          <input type="password" class="password" id="submit-password" autocomplete="off" />
+          <small>Error message</small>
+        </div>
+
+        <button type="submit" class="main button submit-signup signup-submit" id="submit-signup">Get
+          Started</button>
+      </div>
+    </form>
+
+
+    <div class="content" id="login-tab">
+      <div id="login-form">
+        <h1>welcome back!</h1>
+
+        <form id="form-two">
+
+          <div class="field-wrap">
+            <label for="login-email" class="labels">Email address<span class="req">*</span></label>
+            <input type="email" class="email" autocomplete="off" id="login-email" />
+            <small>Error message</small>
+          </div>
+
+          <div class="field-wrap">
+            <label for="login-password">Password<span class="req">*</span></label>
+            <input type="password" class="password" autocomplete="off" id="login-password" />
+            <small>Error message</small>
+          </div>
+
+          <p class="reset"><a href="#">Forgot password?</a></p>
+
+          <button type="submit" class="main button login" id="login-submit">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
